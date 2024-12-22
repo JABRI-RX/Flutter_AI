@@ -1,0 +1,10 @@
+T-shirt/top 
+Pantalon 
+Pullover 
+Robe 
+Manteau
+Sandale 
+Chemise 
+Sneaker 
+Sac 
+Bottine]

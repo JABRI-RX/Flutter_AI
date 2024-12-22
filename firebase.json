@@ -1,0 +1,30 @@
+{
+  "flutter": {
+    "platforms": {
+      "android": {
+        "default": {
+          "projectId": "aimodelsapps",
+          "appId": "1:206872413395:android:050bbc37c5b617cfa50026",
+          "fileOutput": "android/app/google-services.json"
+        }
+      },
+      "dart": {
+        "lib/firebase_options.dart": {
+          "projectId": "aimodelsapps",
+          "configurations": {
+            "android": "1:206872413395:android:050bbc37c5b617cfa50026",
+            "web": "1:206872413395:web:968662d09527b1e0a50026",
+            "windows": "1:206872413395:web:0a433991037c9615a50026"
+          }
+        }
+      }
+    }
+  },
+  "firestore": {
+    "rules": "firestore.rules",
+    "indexes": "firestore.indexes.json"
+  },
+  "storage": {
+    "rules": "storage.rules"
+  }
+}

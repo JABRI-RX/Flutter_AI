@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "206872413395",
+    "project_id": "aimodelsapps",
+    "storage_bucket": "aimodelsapps.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:206872413395:android:050bbc37c5b617cfa50026",
+        "android_client_info": {
+          "package_name": "com.solid.aimodelapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC-VRnZpdZo6nI-8_CXJgjxjDFCOsQCmQE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
