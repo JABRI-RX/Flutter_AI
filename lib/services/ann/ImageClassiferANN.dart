@@ -1,7 +1,11 @@
-import 'package:flutter/foundation.dart';
-
+import 'package:dio/dio.dart' as DIO;
+import 'package:http/http.dart' as http;
+import 'package:image_picker/image_picker.dart';
+import 'package:logger/logger.dart';
 class ImageClassiferANN {
-  const ImageClassiferANN();
+  final dio = DIO.Dio();
+  String path = "http://127.0.0.1:5000/annModel";
+   ImageClassiferANN();
   // Sure here is the code to convert a List To TwoList
   static List<List<int>> convertListToTwoList(List<int> list, int devider) {
     List<List<int>> wholeTwoListed = List.empty(growable: true);
@@ -30,6 +34,19 @@ class ImageClassiferANN {
     List<List<int>> twoList = convertListToTwoList(list,4);
 
     return List.empty();
+  }
+
+  Future<DIO.Response > checkHeartBeat() async{
+    return await dio.get("https://b375-196-120-204-106.ngrok-free.app/annModel");
+  }
+  Future<DIO.Response> processAnnImage(XFile file) async{
+    String fileName = file.name;
+    DIO.FormData formData = DIO.FormData();
+    formData.files.add(MapEntry("imagefile",  await DIO.MultipartFile.fromFile(file.path, filename: "pic-name.png"),));
+    return await dio.post(
+      "https://b375-196-120-204-106.ngrok-free.app/annModel",
+      data: formData
+    );
   }
   //
   // static List<List<int>> convertRGBAtoGrayScaleList(
